@@ -9,7 +9,7 @@ export const parseDate = (dateInput) => {
 
 export const parseDateDDMM = (dateInput) => {
     const date = new Date(dateInput);
-    const month = date.getMonth() + 1 < 10 ? `0${date.getDate()}` : date.getMonth() + 1;
+    const month = date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1;
     const dayInMonth = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate();
     return `${dayInMonth}/${month}`
 }
